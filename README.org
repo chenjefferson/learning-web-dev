@@ -1,0 +1,33 @@
+* TODO learnining list
+  My goal is to build work-ready proficiency with demonstrable projects for
+  web dev.
+** React
+   - [-] React
+     - [X] everything in tutorial
+     - [ ] React Hook Form
+     - [ ] React Router
+     - React Testing Library
+     - [ ] API calls
+       - [ ] Axios (REST)
+       - [ ] Apollo (GraphQL)
+   - [ ] ecosystem
+     - [ ] Next.js
+     - [ ] Jest
+     - [ ] Redux
+     - [ ] use-http
+     - [ ] styled components
+   - [ ] Redux
+   - [ ] capstone
+     - [ ] personal site in React
+** Node.js
+   - [ ] Node.js
+     - [ ] everything in tutorial
+     - [ ] everything in Express.js tutorial
+     - [ ] capstone
+       - [ ] short 2 minute chat with friends
+       - [ ] Omegle for your friend group
+       - [ ] social network for yjust your close fiends
+       - [ ] Costco meta-aggregator site / marketplace
+         - [ ] marketplace
+       - [ ] monitoring service
+       - [ ] squad finder for games
