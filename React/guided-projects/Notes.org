@@ -1,0 +1,9 @@
+* React Guided Projects Notes.org
+** GitHub Finder
+   - learning application
+   - finding where things are on GitHub
+** Contact Keeper
+   - full-stack
+   - keeping track of contacts
+** IT-Logger
+   - React-Redux
