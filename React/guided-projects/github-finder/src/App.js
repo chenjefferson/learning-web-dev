@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Fragment, Component } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Alert from './components/layout/Alert';
 import Users from './components/users/Users';
@@ -7,7 +8,7 @@ import axios from 'axios';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import './App.css';
 
-class App extends React.Component {
+class App extends Component {
   state = {
     users: [],
     loading: false,
@@ -37,19 +38,33 @@ class App extends React.Component {
     const { users, loading } = this.state;
 
     return (
-      <div className='App'>
-        <Navbar icon={faGithub} title={'GitHub Finder'} />
-        <div className='container'>
-          <Alert alert={this.state.alert} />
-          <Search
-            searchUsers={this.searchUsers}
-            clearUsers={this.clearUsers}
-            showClear={users.length > 0}
-            setAlert={this.setAlert}
-          />
-          <Users loading={loading} users={users} />
+      <Router>
+        <div className='App'>
+          <Navbar icon={faGithub} title={'GitHub Finder'} />
+          <div className='container'>
+            <Alert alert={this.state.alert} />
+            <Switch>
+              <Route
+                exact
+                path='/'
+                render={(props) => {
+                  return (
+                    <Fragment>
+                      <Search
+                        searchUsers={this.searchUsers}
+                        clearUsers={this.clearUsers}
+                        showClear={users.length > 0}
+                        setAlert={this.setAlert}
+                      />
+                      <Users loading={loading} users={users} />
+                    </Fragment>
+                  );
+                }}
+              ></Route>
+            </Switch>
+          </div>
         </div>
-      </div>
+      </Router>
     );
   }
 }
